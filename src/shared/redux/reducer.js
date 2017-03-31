@@ -6,10 +6,9 @@ const initialState = {
 const counterReducer = (state = initialState, action) => {
   switch (action.type) {
     case 'INCREMENT_A':
-      return {
-        name: state.name,
+      return Object.assign({}, state, {
         counterA: state.counterA + 1
-      }
+      });
     default:
       return state
   }
