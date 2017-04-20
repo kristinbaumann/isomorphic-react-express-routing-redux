@@ -16,5 +16,5 @@ render(
             {routes}
         </Router>
      </Provider>, 
-    document.getElementById('root')
+    document.getElementById('mount')
 );

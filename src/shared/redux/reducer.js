@@ -1,6 +1,6 @@
 const initialState = {
     counterA: 0,
-    name: 'you'
+    name: 'Isomorphic'
 };
 
 const counterReducer = (state = initialState, action) => {

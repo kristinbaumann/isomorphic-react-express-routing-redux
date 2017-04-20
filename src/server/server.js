@@ -20,14 +20,15 @@ server.get('*', (req, res) => {
             res.redirect(302, redirectLocation.pathname + redirectLocation.search);
         } else if (renderProps) {
             const store = createStore(counterReducer);
-            const content = renderToString(
+            const initialState = store.getState();    
+            const appString = renderToString(
                 <Provider store={store}>
                     <RouterContext {...renderProps}/>
                 </Provider>
             );
-            const initialState = store.getState();    
+           
             res.send(template({
-                body: content,
+                appString,
                 initialState: JSON.stringify(initialState)
             }));
         } else {

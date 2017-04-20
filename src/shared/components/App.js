@@ -7,7 +7,7 @@ class App extends Component {
         const { name, counterA } = this.props;
         return (
             <div>
-                <h1>Isomorphic JavaScript with Routing welcomes {name}!</h1>
+                <h1>Hello {name} JavaScript with Routing & Redux!</h1>
                 <h2>CounterA: {counterA}</h2>
                 <Link to='/counterA'>Link to Component A</Link>
                 <br />
